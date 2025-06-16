@@ -1,0 +1,86 @@
+body {
+  background: linear-gradient(to right, #a8edea, #fed6e3);
+  background-image: url('watermark.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  background-attachment: fixed;
+  opacity: 0.95;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #ffffffcc;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+h1 {
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+.animated-text {
+  animation: pulse 2.5s infinite alternate, fadeIn 1.5s ease;
+}
+
+input[type="file"] {
+  padding: 10px;
+  border: 2px dashed #00796b;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+  background-color: #e0f2f1;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
